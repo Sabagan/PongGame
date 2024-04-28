@@ -20,13 +20,13 @@ public class Main {
 	
 	public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 		
-		File file = new File("../music/Sound.wav");
+		File file = new File("Sound.wav");
 		AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
 		Clip clip = AudioSystem.getClip();
 		clip.open(audioStream);
 		
 		JFrame frame = new JFrame();
-		ImageIcon imageIcon = new ImageIcon("../image/Background.jpg"); // storing image as ImageIcon
+		ImageIcon imageIcon = new ImageIcon("Background.jpg"); // storing image as ImageIcon
 		Image image = imageIcon.getImage(); // turning it into image
 		Image newimg = image.getScaledInstance(750, 500, java.awt.Image.SCALE_SMOOTH); // Changing dimensions of image to fit into button  
 		imageIcon = new ImageIcon(newimg); 
